@@ -1,0 +1,5 @@
+extend type Query {
+  me: User! @delegate(schema: "accounts", path: "user(id: 1)")
+  topProducts(first: Int = 5): [Product] @delegate(schema: "products")
+}
+ 
